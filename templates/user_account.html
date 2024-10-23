@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %} User Account {% endblock %}
+
+{% block content %}
+<main class="container">
+  <article class="my-3 pb-5 border-bottom border-dark">
+    <section class="row bg-body-tertiary p-3">
+      <div class="col-3"><img class="rounded-circle img-fluid" src="/imgs/thabang_logo.jpg" alt="store front"></div>
+      <div class="col-9">
+        <!--account summary & history-->
+        <ul class="list-unstyled p-4 pb-0">
+          <li>
+            <h2><b>Name surname</b></h2>
+          </li>
+          <li><b>Address:</b> F8 St, Seshego-F (S), Polokwane, 0742, Seshego-B, Polokwane, 0751</li>
+          <li><b>Phone Number:</b> 078 152 9404</li>
+          <li><b>Date of birth:</b> 02 July 2024</li>
+          <li>
+            <ul class="list-inline mt-3">
+              <li class="list-inline-item">
+                <a href="/create_item" class="btn btn-dark">Edit</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/create_item" class="btn btn-dark">Settings</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="/payments" class="btn btn-dark">
+                  My payments
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article><br>
+  <div class="row my-3">
+    <article class="col-8">
+      <header class="mb-2">
+        <h3><b>My Stores</b></h3>
+      </header>
+      <nav class="mb-5">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="/create_store" class="btn btn-dark mt-3">Add new store</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="/" class="btn btn-dark mt-3">Settings</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <div class="row">
+          <div class="col-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Store Title</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="/store" class="btn btn-dark">select</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <aside class="sidebar col-4">
+      <h4>Navigation</h4>
+    </aside>
+  </div>
+</main>
+{% endblock %}

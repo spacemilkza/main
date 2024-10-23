@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %} User Account {% endblock %}
+{% block style %}
+<style>
+  body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .form-signin {
+    padding: 1rem;
+  }
+
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+  }
+</style>
+
+{% endblock %}
+{% block content %}
+
+<main class="form-signin w-50 m-auto">
+  <h1 class="h3 mb-3 fw-normal"><b>Add store</b></h1>
+  <form action="/account" method="post" class="my-3 row g-3">
+    <div class="form-floating col-6">
+      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Store name</label>
+    </div>
+    <div class="form-floating col-6">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="col-6 form-floating">
+      <input type="tel" class="form-control" id="inputEmail43" placeholder="Phone Number">
+      <label for="inputEmail43" class="form-label">Phone number</label>
+    </div>
+    <div class="col-6 form-floating">
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="inputPassword4" class="form-label">Password</label>
+    </div>
+    <div class="col-12 form-floating">
+      <textarea class="form-control" rows="4" id="inputAddress2" placeholder="Apartment, studio, or floor"></textarea>
+      <label for="inputAddress2" class="form-label">Store description</label>
+    </div>
+    <div class="col-12 form-floating">
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <label for="inputAddress" class="form-label">Home address</label>
+    </div>
+    <div class="col-md-4 form-floating">
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+      <label for="inputState" class="form-label">Province</label>
+    </div>
+    <div class="col-md-6 form-floating">
+      <input type="text" class="form-control" id="inputCity" placeholder="City">
+      <label for="inputCity" class="form-label">City</label>
+    </div>
+    <div class="col-md-2 form-floating">
+      <input type="text" class="form-control" id="inputZip" placeholder="Zip code">
+      <label for="inputZip" class="form-label">Zip Code</label>
+    </div>
+    <div class="mt-4">
+      <button class="btn btn-dark w-100" type="submit">Add store</button>
+    </div>
+  </form>
+</main>
+{% endblock %}
